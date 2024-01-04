@@ -1,18 +1,20 @@
-import { MouseEventHandler } from "react";
+import { ChangeEventHandler, MouseEventHandler } from "react";
 import "./TaskItem.scss"
 
 type TaskItemProps = {
         taskname:string;
         index:any;
         handleDelete:MouseEventHandler<HTMLButtonElement>;
+        handleChange:ChangeEventHandler<HTMLInputElement>;
     }
    
-const TaskItem = ({taskname, index, handleDelete}:TaskItemProps) => {
+const TaskItem = ({taskname, index, handleDelete, handleChange}:TaskItemProps) => {
+    
 
   return (
-    <div className="todo-item">
+    <div className="todo-item" >
         <li key={index}>
-         <button className="todo__button">✅</button>   
+         <input type="checkbox" onChange={() => handleChange(index)}></input>  
           {taskname}
           <button className="todo__button" onClick={() => handleDelete(index)}>🗑️</button>
           </li>

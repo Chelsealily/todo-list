@@ -5,6 +5,7 @@ import TaskItem from './TaskItem/TaskItem';
 function App() {
   const [todos, setTodos] = useState<string[]>([]);
   const [inputTodo, setInputTodo] = useState<string>("");
+  const [checked, setChecked] = useState<boolean>(false);
 
   const reset = () => window.location.reload()
 
@@ -18,12 +19,17 @@ function App() {
     setInputTodo("")
   }
 
-  const handleDelete = (index:any) => {
+  const handleDelete = (index:any ) => {
     let newTodos = [...todos]
     newTodos.splice(index, 1)
     setTodos(newTodos)
   }
 
+    const handleChange= () => {
+        setChecked(!checked);
+    }
+
+  
 
   return (
     
@@ -40,7 +46,8 @@ function App() {
       <div className="todo__output">
       <ul>
         {todos.map((task, index) => (
-          <TaskItem key={index} taskname = {task} index = {index} handleDelete={handleDelete}/>))}
+          <TaskItem key={index} taskname = {task} index = {index} handleDelete={handleDelete} handleChange={handleChange}/>
+            ))}
       </ul>    
       </div></div>
 </section>

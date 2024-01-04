@@ -13,11 +13,13 @@ input {
     border:none;
 }
 
+
 .todo-container{
     background-color: white;
     border: 10px dashed rgb(124, 86, 158);
     border-radius: 5%;
-    height:80vh;
+    height:max-content;
+    padding-bottom: 30px;
     width: 70vw;
     display: flex;
     justify-content: center;
@@ -29,13 +31,14 @@ input {
     font-weight: bold;
 }
 
+
 .todo__button {
     background-color: white;
     border: none;
    
 
 &--reset {
-    padding-top: 80px;
+    padding-top: 20px;
     border: none;
     background-color: white;
 }
