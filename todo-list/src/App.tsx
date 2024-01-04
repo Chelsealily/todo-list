@@ -39,8 +39,8 @@ function App() {
       <h1>✏️ My Todo List</h1>
       
       <div className="todo__input">
-      <form>
-        <input type="text" placeholder="🔎 Add task.." value={inputTodo} onChange={handleInput}/>
+      <form id="todo__form">
+        <input id="todo__input" type="text" placeholder="🔎 Add task.." value={inputTodo} onChange={handleInput}/>
         <button className="todo__button" onClick={handleSubmit}> ➕ </button>
       </form></div> 
       <div className="todo__output">
