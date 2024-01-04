@@ -1,46 +1,42 @@
 body {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
 }
 
 h1 {
-    font-variant: small-caps;
+  font-variant: small-caps;
 }
 
 input {
-    border:none;
+  border: none;
 }
 
-
-.todo-container{
-    background-color: white;
-    border: 10px dashed rgb(124, 86, 158);
-    border-radius: 5%;
-    height:max-content;
-    padding-bottom: 30px;
-    width: 70vw;
-    display: flex;
-    justify-content: center;
+.todo-container {
+  background-color: white;
+  border: 10px dashed rgb(124, 86, 158);
+  border-radius: 5%;
+  height: max-content;
+  padding-bottom: 30px;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
 }
 
 .todo__input {
-    border-radius: 5%;
-    border: 5px solid black;
-    font-weight: bold;
+  border-radius: 5%;
+  border: 5px solid black;
+  font-weight: bold;
 }
 
-
 .todo__button {
-    background-color: white;
-    border: none;
-   
+  background-color: white;
+  border: none;
 
-&--reset {
+  &--reset {
     padding-top: 20px;
     border: none;
     background-color: white;
+  }
 }
-
-} 
