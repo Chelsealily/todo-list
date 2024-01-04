@@ -15,7 +15,7 @@ The main functions:
 <ul>
   <li><b>Add task input bar and button</b></li> - entering a task into this bar and then clicking the + button will add your task to the list below
   <li><b> Checkbox and Delete task button</b></li> - Once your task is added, you then have the option of marking it as complete by ticking the box or deleting the task altogether by clicking the bin icon
-  <li><b>Reset Button</b></li> - this does a hot refresh of the page to allow for a full page reset 
+  <li><b>Reset Button</b></li> - this resets the task list to blank
 </ul>
 
 <h2>Preview</h2>
