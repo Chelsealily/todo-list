@@ -1,5 +1,6 @@
 import {FormEvent, MouseEvent, useState } from 'react'
 import './App.scss'
+import TaskItem from './TaskItem/TaskItem';
 
 function App() {
   const [todos, setTodos] = useState<string[]>([]);
@@ -17,14 +18,11 @@ function App() {
     setInputTodo("")
   }
 
-  //need to fix, deletes lowest 1
- const handleDelete = (index:number, _event:MouseEvent<HTMLButtonElement>) => {
+  const handleDelete = (index:any) => {
     let newTodos = [...todos]
     newTodos.splice(index, 1)
-    console.log(index)
     setTodos(newTodos)
   }
-
 
 
   return (
@@ -41,14 +39,9 @@ function App() {
       </form></div> 
       <div className="todo__output">
       <ul>
-        {todos.map((todo) => (
-          <li key={todo}>
-         <button className="todo__button">✅</button>   
-          {todo}
-          <button className="todo__button" onClick={handleDelete}>🗑️</button>
-          </li>
-        ))}
-      </ul>
+        {todos.map((task, index) => (
+          <TaskItem key={index} taskname = {task} index = {index} handleDelete={handleDelete}/>))}
+      </ul>    
       </div></div>
 </section>
       
