@@ -7,7 +7,9 @@ function App() {
   const [inputTodo, setInputTodo] = useState<string>("");
   const [checked, setChecked] = useState<boolean>(false);
 
-  const reset = () => window.location.reload();
+  const reset = () => {
+  setTodos([]);
+}
 
   const handleInput = (event: FormEvent<HTMLInputElement>) => {
     setInputTodo(event.currentTarget.value);
@@ -29,12 +31,12 @@ function App() {
     setChecked(!checked);
   };
 
+
   return (
     <section className="todo-container">
       <div className="todo">
         <button className="todo__button--reset" onClick={reset}>
-          {" "}
-          Reset{" "}
+          Reset
         </button>
         <h1>✏️ My Todo List</h1>
 
@@ -48,13 +50,13 @@ function App() {
               onChange={handleInput}
             />
             <button className="todo__button" onClick={handleSubmit}>
-              {" "}
-              ➕{" "}
+              ➕
             </button>
           </form>
         </div>
         <div className="todo__output">
           <ul>
+            
             {todos.map((task, index) => (
               <TaskItem
                 key={index}
